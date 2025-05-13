@@ -1,0 +1,10 @@
+{
+	"id": "template-system",
+	"name": "Template for game system",
+	"title": "Template System",
+	"description": "Template system for testing and developing",
+	"version": "0.0.1",
+	"socket": true,
+	"manifest": "",
+	"download": ""
+}
