@@ -1,0 +1,8 @@
+commit-msg:
+  commands:
+    commitlint:
+      run: bunx devmoji -e --lint
+pre-push:
+  commands:
+    test:
+      run: bun run test

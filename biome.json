@@ -1,0 +1,38 @@
+{
+	"$schema": "http://biomejs.dev/schemas/1.4.1/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"formatter": {
+		"ignore": [
+			"*devbox*",
+			"./index.js",
+			"./index.css",
+			"./types/foundry*",
+			"__fixtures__/*",
+			"playwright-report/*"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"ignore": [
+			"*devbox*",
+			"./index.js",
+			"./index.css",
+			"./types/foundry*",
+			"__fixtures__/*",
+			"playwright-report/*"
+		],
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noParameterAssign": "off"
+			},
+			"complexity": {
+				"noStaticOnlyClass": "off",
+				"noThisInStatic": "off",
+				"useLiteralKeys": "off"
+			}
+		}
+	}
+}

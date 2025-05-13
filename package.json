@@ -4,6 +4,21 @@
 	"type": "module",
 	"private": true,
 	"version": "0.0.1",
+	"scripts": {
+		"build": "bun esbuild.config.ts",
+		"format": "biome format --write .",
+		"foundry": "bun tools/foundry.ts",
+		"postinstall": "lefthook install && bun run setup",
+		"lint": "biome check --write .",
+		"lint:ci": "bunx biome ci .",
+		"release": "bun tools/release.ts",
+		"setup": "bun tools/setup.ts",
+		"start": "bun run build --development",
+		"test": "bun run test:types && bun run lint:ci",
+		"test:e2e": "bunx playwright test",
+		"test:types": "bunx tsc && bunx tsc -p ./src/tsconfig.json",
+		"version": "bun tools/version.ts"
+	},
 	"peerDependencies": {
 		"typescript": "^5"
 	},
@@ -30,8 +45,5 @@
 		"gluegun": "5.1.6",
 		"typescript": "5.5.3"
 	},
-	"trustedDependencies": [
-		"@biomejs/biome",
-		"esbuild"
-	]
+	"trustedDependencies": ["@biomejs/biome", "esbuild"]
 }

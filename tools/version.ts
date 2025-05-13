@@ -1,6 +1,6 @@
-import { $ } from "bun";
 // Use Bun when Bun supports node:fs/promises fully
 import { writeFile } from "node:fs/promises";
+import { $ } from "bun";
 
 // Version package
 await $`bunx changeset version`;
